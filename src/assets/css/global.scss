@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Oswald Light";
+  src: url("fonts/oswald-light-webfont.woff2") format("woff2"), url("fonts/oswald-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$primary-dark-color: rgb(28, 59, 151);
+$primary-color: #2955d9;
+$primary-light-color: rgb(83, 119, 224);
+
+$secondary-dark-color: rgb(28, 127, 172);
+$secondary-color: #29b6f6;
+$secondary-light-color: rgb(83, 196, 247);
+
+
+a {
+  color: $primary-dark-color;
+  text-decoration: none;
+}
+
+a:hover,
+a.active {
+  color: $primary-light-color;
+  text-decoration: none;
+}
