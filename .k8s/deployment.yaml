@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: soco-openlap-indicatorengine
+  namespace: soco-openlap-indicatorengine
+  labels:
+    app: soco-openlap-indicatorengine
+    keel.sh/policy: all
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: soco-openlap-indicatorengine
+  template:
+    metadata:
+      labels:
+        app: soco-openlap-indicatorengine
+    spec:
+      containers:
+      - name: soco-openlap-indicatorengine
+        image: inko/soco-openlap-indicatorengine
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          periodSeconds: 1
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+        lifecycle:
+          preStop:
+            exec:
+              command: [ "sh", "-c", "sleep 5" ]
+        resources:
+          requests:
+            memory: 15Mi
+            cpu: 100m
+          limits:
+            memory: 25Mi
+            cpu: 500m
