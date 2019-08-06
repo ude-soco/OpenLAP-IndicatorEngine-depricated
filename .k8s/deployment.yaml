@@ -1,25 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: soco-openlap-indicatorengine
-  namespace: soco-openlap-indicatorengine
+  name: web
   labels:
-    app: soco-openlap-indicatorengine
     keel.sh/policy: all
 spec:
   replicas: 2
   strategy:
     type: RollingUpdate
-  selector:
-    matchLabels:
-      app: soco-openlap-indicatorengine
   template:
-    metadata:
-      labels:
-        app: soco-openlap-indicatorengine
     spec:
       containers:
-      - name: soco-openlap-indicatorengine
+      - name: httpd
         image: inko/soco-openlap-indicatorengine
         ports:
         - containerPort: 80

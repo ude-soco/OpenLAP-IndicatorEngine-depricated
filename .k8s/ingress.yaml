@@ -1,21 +1,20 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: soco-openlap-indicatorengine
-  namespace: soco-openlap-indicatorengine
+  name: web
   annotations:
     kubernetes.io/tls-acme: "true"
     certmanager.k8s.io/cluster-issuer: letsencrypt-prod
     traefik.ingress.kubernetes.io/redirect-entry-point: https
 spec:
   rules:
-  - host: openlap-indicatorengine.soco.inko.cloud
+  - host: openlap.sc.inko.cloud
     http:
       paths:
       - backend:
-          serviceName: soco-openlap-indicatorengine
+          serviceName: web
           servicePort: 80
   tls:
   - hosts:
-    - openlap-indicatorengine.soco.inko.cloud
-    secretName: soco-openlap-indicatorengine-crt
+    - openlap.sc.inko.cloud
+    secretName: crt

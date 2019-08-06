@@ -1,0 +1,15 @@
+namespace:  sc
+namePrefix: soco-openlap-indicatorengine-
+
+commonLabels:
+  app:   openlap-indicatorengine
+  owner: sc
+  stage: prod
+
+commonAnnotations:
+  contact: "Ralf Berger <ralf.berger@uni-due.de>"
+
+resources:
+- .k8s/deployment.yaml
+- .k8s/service.yaml
+- .k8s/ingress.yaml
