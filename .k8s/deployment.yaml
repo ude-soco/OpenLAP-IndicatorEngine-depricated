@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  labels:
+    keel.sh/policy: all
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+  template:
+    spec:
+      containers:
+      - name: httpd
+        image: inko/soco-openlap-indicatorengine
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          periodSeconds: 1
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+        lifecycle:
+          preStop:
+            exec:
+              command: [ "sh", "-c", "sleep 5" ]
+        resources:
+          requests:
+            memory: 15Mi
+            cpu: 100m
+          limits:
+            memory: 25Mi
+            cpu: 500m
