@@ -3,3 +3,5 @@ services:
   web:
     build: .
     image: inko/soco-openlap-indicatorengine
+    ports:
+    - 8080:80
