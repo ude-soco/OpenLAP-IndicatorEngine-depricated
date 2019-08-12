@@ -80,9 +80,9 @@ const Home = (props) => {
     const classes = useStyles();
 
     const data = [
-        { imageURL: "/images/news/jla.png", date: "20/07/2018", title: "Publication in Journal of Learning Analytics", desc: "<a href='/publications?select=jla18'>A Modular and Extensible Framework for Open Learning Analytics</a> paper is published in the <i>Journal of Learning Analytics</i>  VOL 5 NO 1 (2018)." },
-        { imageURL: "/images/news/csedu17.jpeg", date: "20/04/2017", title: "Presentation in CSEDU 2017", desc: "<a href='/publications?select=csedu17'>The Goal - Question - Indicator Approach for Personalized Learning Analytics</a> paper is presented at the <i>9th International Conference on Computer Supported Education (CSEDU)</i> 2017." },
-        { imageURL: "/images/news/bdla.jpg", date: "28/08/2016", title: "\"Big Data and Learning Analytics in Higher Education\" Book available.", desc: "<a href='/publications?select=bdla17'>Toward an Open Learning Analytics Ecosystem</a> book chapter published in the <i>Big Data and Learning Analytics in Higher Education</i> book by Springer is now available." },
+        { imageURL: "/images/news/rwth.png", date: "14/12/2018", title: "Doctoral dissertation publication in RWTH Aachen Univeristy", desc: "Doctoral dissertation titled <a href='/publications?select=rwth18'>OpenLAP: A User-Centered Open Learning Analytics Platform</a> of Dr. Arham Muslim is published in RWTH Aachen Univeristy." },
+        { imageURL: "/images/news/jla.jpg", date: "20/07/2018", title: "Publication in Journal of Learning Analytics", desc: "<a href='/publications?select=jla18'>A Modular and Extensible Framework for Open Learning Analytics</a> paper is published in the <i>Journal of Learning Analytics</i>  VOL 5 NO 1 (2018)." },
+        { imageURL: "/images/news/csedu17.jpeg", date: "20/04/2017", title: "Presentation in CSEDU 2017", desc: "<a href='/publications?select=csedu17'>The Goal - Question - Indicator Approach for Personalized Learning Analytics</a> paper is presented at the <i>9th International Conference on Computer Supported Education (CSEDU)</i> 2017." }
     ];
 
     const news = [];

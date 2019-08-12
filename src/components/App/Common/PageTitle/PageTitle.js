@@ -6,9 +6,9 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 
 const useStyles = makeStyles(theme => ({
     title: {
-        backgroundImage: 'url("/images/title-banner.png")',
+        backgroundImage: 'url("/images/title-banner.jpg")',
         backgroundSize: 'cover',
-        backgroundPosition: 'right top',
+        backgroundPosition: 'right center',
         marginBottom: '2rem',
     },
     bannerTextContainer: {

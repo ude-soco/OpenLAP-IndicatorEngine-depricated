@@ -5,8 +5,15 @@ import Divider from '@material-ui/core/Divider';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
+    title: {
+        margin: '0',
+    },
+    list: {
+        margin: '0',
+    },
     divider: {
         marginTop: theme.spacing(3),
         marginBottom: theme.spacing(3),
@@ -29,8 +36,10 @@ const Footer = () => {
             </Grid>
             <Grid item xs={12} sm="auto">
                 <Box mt={{ xs: 3, sm: 0 }} display="block">
-                    <strong>Related Works</strong>
-                    <List dense={true}>
+                    <Typography gutterBottom variant="h6" className={classes.title}>
+                        Related Works
+                    </Typography>
+                    <List dense={true} className={classes.list}>
                         <ListItem><a href="http://www.elearnspace.org/blog/wp-content/uploads/2016/02/ProposalLearningAnalyticsModel_SoLAR.pdf" target="_blank" rel="noopener noreferrer">SoLAR</a></ListItem>
 
                         <ListItem><a href="https://www.apereo.org/communities/learning-analytics-initiative" target="_blank" rel="noopener noreferrer">Apereo LAI</a></ListItem>
@@ -40,8 +49,10 @@ const Footer = () => {
             </Grid>
             <Grid item xs={12} sm="auto">
                 <Box mt={{ xs: 3, sm: 0 }} display="block">
-                    <strong>Standards & Specifications</strong>
-                    <List dense={true}>
+                    <Typography gutterBottom variant="h6" className={classes.title}>
+                        Standards & Specifications
+                    </Typography>
+                    <List dense={true} className={classes.list}>
                         <ListItem><a href="https://www.imsglobal.org/activity/caliperram" target="_blank" rel="noopener noreferrer">IMS Caliper</a></ListItem>
 
                         <ListItem><a href="https://www.adlnet.gov/adl-research/performance-tracking-analysis/experience-api/" target="_blank" rel="noopener noreferrer">xAPI</a></ListItem>

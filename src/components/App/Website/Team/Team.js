@@ -20,11 +20,11 @@ const useStyles = makeStyles(theme => ({
 const Team = () => {
     const classes = useStyles();
     const data = [
-        { name: "Abdul-Rahman Khan", affiliation: "Student at University Duisburg-Essen", imageFile: "male.png" },
-        { name: "Muhammad Faizan Riaz", affiliation: "Student at University Duisburg-Essen", imageFile: "male.png" },
+        { name: "Abdul-Rahman Khan", affiliation: "Student at University Duisburg-Essen", imageFile: "khan.jpeg" },
+        { name: "Muhammad Faizan Riaz", affiliation: "Student at University Duisburg-Essen", imageFile: "riaz.jpg" },
         { name: "Bilawal Wajid Ali", affiliation: "Student at University Duisburg-Essen", imageFile: "male.png" },
-        { name: "Sammar Javed", affiliation: "M.Sc. University Duisburg-Essen", imageFile: "male.png" },
-        { name: "Memoona Mughal", affiliation: "M.Sc. RWTH Aachen University", imageFile: "female.png" },
+        { name: "Sammar Javed", affiliation: "M.Sc. University Duisburg-Essen", imageFile: "javed.jpg" },
+        { name: "Memoona Mughal", affiliation: "M.Sc. RWTH Aachen University", imageFile: "mughal.jpg" },
         { name: "Oscar Eduardo Barrios Varela", affiliation: "M.Sc. RWTH Aachen University", imageFile: "barrios.jpg" },
         { name: "Muhammad Bassim Bashir", affiliation: "M.Sc. RWTH Aachen University", imageFile: "male.png" },
         { name: "Tanmaya Mahapatra", affiliation: "M.Sc. RWTH Aachen University", imageFile: "male.png" },
@@ -33,7 +33,7 @@ const Team = () => {
     const students = [];
 
     for (const [index, value] of data.entries()) {
-        students.push(<Grid key={index}  item md={3} ><Member name={value.name} affiliation={value.affiliation} imageFile={value.imageFile} /></Grid>);
+        students.push(<Grid key={index} item xs={6} md={3} ><Member name={value.name} affiliation={value.affiliation} imageFile={value.imageFile} /></Grid>);
     }
 
     return <>

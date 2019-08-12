@@ -7,12 +7,13 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
     image: {
-        maxWidth: '100%',
+        width: '70%',
         height: 'auto',
         borderRadius: '50%'
     },
     card: {
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        textAlign:'center',
     }
 }));
 

@@ -21,6 +21,7 @@ const Publications = (props) => {
     const classes = useStyles();
     const data = [{
         year: 2018, publications: [
+            { key: "rwth18", title: "OpenLAP: A User-Centered Open Learning Analytics Platform", authors: "Arham Muslim", journal: "Doctoral dissertation, RWTH Aachen University", meta: "2018.", pubURL: "http://publications.rwth-aachen.de/record/752480", downloadURL: "" },
             { key: "jla18", title: "A modular and extensible framework for open learning analytics", authors: "Arham Muslim, Mohamed Amine Chatti, Muhammad Bassim Bashir, Oscar Eduardo Barrios Varela, Ulrik Schroeder", journal: "Journal of Learning Analytics", meta: "5(1), 92-100, 2018.", pubURL: "https://learning-analytics.info/journals/index.php/JLA/article/view/5607", downloadURL: "/uploads/publications/JLA18_Framework.pdf" }
         ]
     }, {
