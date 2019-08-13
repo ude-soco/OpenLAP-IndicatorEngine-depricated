@@ -22,7 +22,7 @@ const Team = () => {
     const data = [
         { name: "Abdul-Rahman Khan", affiliation: "Student at University Duisburg-Essen", imageFile: "khan.jpeg" },
         { name: "Muhammad Faizan Riaz", affiliation: "Student at University Duisburg-Essen", imageFile: "riaz.jpg" },
-        { name: "Bilawal Wajid Ali", affiliation: "Student at University Duisburg-Essen", imageFile: "male.png" },
+        { name: "Bilawal Wajid Ali", affiliation: "Student at University Duisburg-Essen", imageFile: "ali.jpg" },
         { name: "Sammar Javed", affiliation: "M.Sc. University Duisburg-Essen", imageFile: "javed.jpg" },
         { name: "Memoona Mughal", affiliation: "M.Sc. RWTH Aachen University", imageFile: "mughal.jpg" },
         { name: "Oscar Eduardo Barrios Varela", affiliation: "M.Sc. RWTH Aachen University", imageFile: "barrios.jpg" },
