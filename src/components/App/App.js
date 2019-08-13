@@ -13,27 +13,25 @@ import Architecture from './Website/Architecture/Architecture';
 import Publications from './Website/Publications/Publications';
 import Team from './Website/Team/Team';
 
-class App extends React.Component {
-    render() {
-        return <>
-            <CssBaseline />
-            <MuiThemeProvider theme={theme}>
-                <Router>
-                    <Header />
-                    <Switch>
-                        <Route exact path="/" component={Home} />
-                        <Route path="/news" component={News} />
-                        <Route path="/architecture" component={Architecture} />
-                        <Route path="/publications" component={Publications} />
-                        <Route path="/team" component={Team} />
-                        <Route component={MissingRoute} />
-                    </Switch>
+const App = () => {
+    return <>
+        <CssBaseline />
+        <MuiThemeProvider theme={theme}>
+            <Router>
+                <Header />
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/news" component={News} />
+                    <Route path="/architecture" component={Architecture} />
+                    <Route path="/publications" component={Publications} />
+                    <Route path="/team" component={Team} />
+                    <Route component={MissingRoute} />
+                </Switch>
 
-                    <Footer />
-                </Router>
-            </MuiThemeProvider>
-        </>;
-    }
+                <Footer />
+            </Router>
+        </MuiThemeProvider>
+    </>;
 }
 
 export default App;
