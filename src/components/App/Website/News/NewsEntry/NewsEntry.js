@@ -6,10 +6,12 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import WatchLaterOutlined from '@material-ui/icons/WatchLaterOutlined';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
+import JsxParser from 'react-jsx-parser'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
     avatar: {
-        margin: 10,
+        marginRight: theme.spacing(1),
         width: 70,
         height: 70,
         borderRadius: '10%'
@@ -27,7 +29,6 @@ const useStyles = makeStyles(theme => ({
 
 const NewsEntry = (props) => {
     const classes = useStyles();
-    const innerHtml = { __html: props.children }
 
     return <>
         <Grid container justify="flex-start" alignItems="flex-start">
@@ -43,7 +44,14 @@ const NewsEntry = (props) => {
                         <WatchLaterOutlined className={classes.dateText} />{props.date}
                     </Typography>
                 </Box>
-                <Typography variant="body1" dangerouslySetInnerHTML={innerHtml} />
+                <Typography variant="body1" >
+                    <JsxParser
+                        disableFragments={false}
+                        renderInWrapper={false}
+                        components={{ Link }}
+                        jsx={props.children}
+                    />
+                </Typography>
             </Grid>
         </Grid>
         {!props.hideRuler && <Divider variant="middle" className={classes.divider} />}
