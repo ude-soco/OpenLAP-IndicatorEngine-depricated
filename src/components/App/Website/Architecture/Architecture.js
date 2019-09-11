@@ -118,7 +118,7 @@ const Architecture = () => {
                     <Card elevation={0} className={classes.card}>
                         <CardMedia
                             className={classes.scenarioImg}
-                            image={process.env.PUBLIC_URL + '/images/Student.jpg'}
+                            image={process.env.PUBLIC_URL + '/images/student.jpg'}
                         />
                         <ExpansionPanel elevation={0} className={classes.expension}>
                             <ExpansionPanelSummary
@@ -144,7 +144,7 @@ const Architecture = () => {
                     <Card elevation={0} className={classes.card}>
                         <CardMedia
                             className={classes.scenarioImg}
-                            image={process.env.PUBLIC_URL + '/images/Teacher.jpg'}
+                            image={process.env.PUBLIC_URL + '/images/teacher.jpg'}
                         />
                         <ExpansionPanel elevation={0} className={classes.expension}>
                             <ExpansionPanelSummary
@@ -168,7 +168,7 @@ const Architecture = () => {
                     <Card elevation={0} className={classes.card}>
                         <CardMedia
                             className={classes.scenarioImg}
-                            image={process.env.PUBLIC_URL + '/images/Developer.jpeg'}
+                            image={process.env.PUBLIC_URL + '/images/developer.jpeg'}
                         />
                         <ExpansionPanel elevation={0} className={classes.expension}>
                             <ExpansionPanelSummary

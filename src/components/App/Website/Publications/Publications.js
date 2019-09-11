@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Container from '@material-ui/core/Container';
 import PageTitle from '../../Common/PageTitle/PageTitle';
 import PublicationEntry from './PublicationEntry/PublicationEntry';
@@ -6,6 +6,7 @@ import Box from '@material-ui/core/Box';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import $ from 'jquery';
 
 const useStyles = makeStyles(theme => ({
     divider: {
@@ -19,6 +20,12 @@ const Publications = (props) => {
     const query = new URLSearchParams(props.location.search);
     const selectedPub = query.get('select') || "NA";
     const classes = useStyles();
+
+    useEffect(() => {
+        if (selectedPub !== "NA")
+            $('html, body').animate({ scrollTop: $("div[id='" + selectedPub + "']").offset().top - 72 }, 100);
+    })
+
     const data = [{
         year: 2018, publications: [
             { key: "rwth18", title: "OpenLAP: A User-Centered Open Learning Analytics Platform", authors: "Arham Muslim", journal: "Doctoral dissertation, RWTH Aachen University", meta: "2018.", pubURL: "http://publications.rwth-aachen.de/record/752480", downloadURL: "" },
